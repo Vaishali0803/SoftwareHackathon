@@ -1,0 +1,7 @@
+# SDV and CTGAN — install these separately as they have large dependency trees
+# and may take several minutes to download.
+#
+# Run: pip install -r requirements-sdv.txt
+#
+sdv>=1.9.0
+ctgan>=0.9.0

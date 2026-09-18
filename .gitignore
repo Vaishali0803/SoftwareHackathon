@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.env
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Uploads and exports (generated at runtime)
+backend/uploads/
+backend/exports/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

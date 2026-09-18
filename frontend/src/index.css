@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+  * {
+    @apply border-slate-200;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm;
+  }
+  .card-header {
+    @apply px-6 py-4 border-b border-slate-100;
+  }
+  .card-body {
+    @apply p-6;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800 shadow-sm;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 active:bg-slate-100;
+  }
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green {
+    @apply badge bg-clinical-100 text-clinical-700;
+  }
+  .badge-blue {
+    @apply badge bg-brand-100 text-brand-700;
+  }
+  .badge-yellow {
+    @apply badge bg-amber-100 text-amber-700;
+  }
+  .badge-red {
+    @apply badge bg-red-100 text-red-700;
+  }
+  .badge-gray {
+    @apply badge bg-slate-100 text-slate-600;
+  }
+  .input {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:bg-slate-50 disabled:text-slate-500;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+  .stat-card {
+    @apply card p-5;
+  }
+  .section-title {
+    @apply text-lg font-semibold text-slate-800;
+  }
+  .page-title {
+    @apply text-2xl font-bold text-slate-900;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-slate-100; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+
+/* Progress bar animation */
+@keyframes progress-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.progress-pulse { animation: progress-pulse 2s ease-in-out infinite; }
